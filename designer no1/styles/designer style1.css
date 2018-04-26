@@ -1,0 +1,59 @@
+.outside {
+    width:100px;
+    margin:0 auto;
+    text-align:center;
+}
+.css-font {
+    width:70px;
+    margin:0 auto 30px;
+    text-align:center;
+    color:rgb(66,108,236);
+}
+.css-chop ,.tran-one{
+    width:0px;
+    height:5px;
+    margin:0 auto 30px;
+    background-color:rgb(66,108,236);
+}
+.tran-one { 
+    transition:width 2s;
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out; /* Firefox 4 */
+    -webkit-transition-timing-function: ease-in-out; /* Safari 和 Chrome */
+    -o-transition-timing-function: ease-in-out; 
+}
+input{
+    width:70px;
+    margin:0 auto;
+    border:1px solid rgb(66,108,236);
+    background-color:white;
+}
+.chop-in {
+    animation:mymovein 1.2s;
+    animation-fill-mode:forwards;
+    
+}
+.chop-out {
+    animation:mymoveout 1.2s;
+    animation-fill-mode:forwards;
+}
+@keyframes mymovein {
+    from{width:0px;}
+    to{width:70px;}
+}
+@keyframes mymoveout {
+    from{width:70px;}
+    to{width:0px;}
+}
+.css-tran{
+
+    width:70px;
+    transition:width 2s;
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out; /* Firefox 4 */
+    -webkit-transition-timing-function: ease-in-out; /* Safari 和 Chrome */
+    -o-transition-timing-function: ease-in-out; 
+}
+.css-chop:hover{
+    width:70px;
+}
