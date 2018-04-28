@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>欧巴呀</title>
+<style type="text/css">
+.outside{
+    width:100%;
+}
+.box{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 100px auto;
+    box-sizing: border-box;
+    perspective: 1200px;
+    -webkit-perspective: 1200px;
+}
+.box::before,.box::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -ms-transition: transform 1s;
+    backface-visibility: hidden;
+}
+.box::before{
+    background: url(img/four-1.jpg) no-repeat center;
+}
+.box::after{
+    transform:rotateY(-180deg);
+    -webkit-trasnform:rotateY(-180deg);
+    -ms-transform:rotateY(-180deg);
+    background: url(img/four-2.jpg) no-repeat center;
+}
+.box:hover::before{
+    transform:rotateY(180deg);
+    -webkit-trasnform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+}
+.box:hover::after{
+    transform:rotateY(0deg);
+    -webkit-trasnform:rotateY(0deg);
+    -ms-transform:rotateY(0deg);
+}
+</style>
+</head>
+<body>
+    <div class="outside">
+        <div class="box"></div>
+    </div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>
