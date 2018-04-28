@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>立方体</title>
+<style type="text/css">
+body{
+    background-color:#000;
+}
+.outside{
+    position:relative;
+    height:100px;
+    width:100px;
+    -webkit-perspective:150;
+}
+
+.cube {
+    /*position:relative;*/
+    margin:100px;
+    height:100px;
+    width:100px;
+    transform-style: preserve-3d;
+}
+.cube:hover{
+    animation: autoMove 10s infinite linear;
+}
+.outside>div>div{
+    position:absolute;
+    width:60px;
+    height:60px;
+    line-height:60px;
+    margin:20px;
+    border:1px solid #2089F1;
+    background-color:rgba(32,139,243,0.5);
+    text-align:center;
+}
+.div_0{
+    transform:rotateY(0) translateZ(30px);
+}
+.div_1{
+    transform:rotateY(-90deg) translateZ(30px);
+}
+.div_2{
+    transform:rotateY(180deg) translateZ(30px);
+}
+.div_3{
+    transform:rotateY(-90deg) translateZ(-30px);
+}
+.div_4{
+    transform:rotateX(-90deg) translateZ(30px);
+}
+.div_5{
+    transform:rotateX(90deg) translateZ(30px);
+}
+@keyframes autoMove{
+    from {}
+    to {
+        transform:rotateY(360deg);
+    }
+}
+</style>
+</head>
+<body>
+    <div class="outside">
+        <div class="cube">
+            <div class="div_0">box0</div>
+            <div class="div_1">box1</div>
+            <div class="div_2">box2</div>
+            <div class="div_3">box3</div>
+            <div class="div_4">box4</div>
+            <div class="div_5">box5</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>
