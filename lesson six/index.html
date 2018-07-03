@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>欧巴呀</title>
+<style type="text/css">
+.outside {
+    width:100%;
+}
+.login {
+    width:140px;
+    margin:0 auto;
+    height:200px;
+    padding:10px;
+    background-color:#ccc;
+    position:relative;
+}
+.my-label {
+    display:block;
+    width:100px;
+}
+.my-label {
+    position:absolute;
+}
+.my-label:first-child {
+    top:20px;
+}
+.my-label:last-child {
+    top:60px;
+}
+.ind-input,.my-input {
+    width:100px;
+    height:20px;
+}
+.my-input {
+    visibility:hidden;
+}
+.my-test{
+    width:100px;
+    height:20px;
+}
+</style>
+</head>
+<body>
+    <div class="outside">
+        <div class="login">
+            <label for="my_name" class="my-label">用户名
+                <div class="ind-input">{{name}}</div>
+                <input type="text" id="my_name" class="my-name my-input" value="{{= name =}}">
+            </label>
+            <label for="my_pwd" class="my-label">密码
+                <div class="ind-input">{{password}}</div>
+                <input type="password" id="my_pwd" class="my-pwd my-input" value="{{= password =}}">
+            </label>
+            <label for="my_test" class="my-label">test
+                <div class="ind-input">{{test}}</div>
+                <input type="password" id="my_test" class="my-test my-input" value="{{= test =}}">
+            </label>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/san@latest/dist/san.dev.js"></script>
+<script type="text/javascript">
+/*var MyApp = san.defineComponent({
+    template:''
+        + '<div>'
+        +   '<input value="{= name =}" placeholder="place input">'
+        +   'Hello {{name}}!'
+        + '</div>'
+});*/
+
+/*var myApp = new MyApp();
+myApp.attach(document.body);*/
+</script>
+</html>

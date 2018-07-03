@@ -1,0 +1,13 @@
+{
+  "name": "san-1",
+  "version": "1.0.0",
+  "description": "san mvvm learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rd/s/q dist & parcel index.html",
+    "bulid": "rd/s/q build & parcel build index.html -d build --public-url ./"
+  },
+  "author": "",
+  "license": "ISC"
+}
