@@ -107,6 +107,7 @@
         to {width: 0%}
     }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"></link>
     <script src="js/jquery-2.1.4.js"></script>
 </head>
 <body>
@@ -123,7 +124,7 @@
             <div class="borbtm"></div>
             <input type="password" id="pswd" class="ma-input" value="">
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" disabled>Submit</button>
     </form>
 </div>
 <script type="text/javascript">
@@ -135,6 +136,15 @@ $(document).ready(function(){
     $(".ma-input").blur(function(){
         $(this).siblings('label').removeClass('ma-label').addClass('ma-label2');
         $(this).siblings('.borbtm').removeClass('borbtm-in').addClass('borbtm-out');
+        var pswd = $('#pswd').val().length;
+        var name = $('#name').val().length;
+        if(pswd && name) {
+            $('button').removeAttr('disabled');
+            $('button').removeClass().addClass('pulse animated infinite fast');
+        }else {
+            $('button').attr('disabled');
+            $('button').removeClass();
+        }
     })
 })
 </script>
